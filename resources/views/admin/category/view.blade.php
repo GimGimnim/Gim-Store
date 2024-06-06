@@ -46,9 +46,8 @@
           			<tr>
           				<th>S/N</th>
           				<th>Category Name</th>
-          				<th>Summary</th>
           				<th>Photo</th>
-          				<th>Edit</th>
+          				<th>Delete</th>
           			</tr>
 
           			@foreach($data as $data)
@@ -56,11 +55,13 @@
           			<tr>
           				<td>{{$data->id}}</td>
           				<td>{{$data->cat_name}}</td>
-          				<td>{{$data->cat_name}}</td>
           				<td>{{$data->cat_photo}}</td>
           				<td>
           					<!-- <a href="{{url('edit_category',$data->id)}}"><i style="color: blue;" class="icon-windows"></i></a> -->
-          					<a class="btn btn-danger" href="{{url('delete_category',$data->id)}}"><i class="icon-windows"></i></a>
+          					<a class="btn btn-danger" href="{{url('delete_category',$data->id)}}">
+          						<!-- <i class="icon-windows"></i> -->
+          						Delete
+          					</a>
           				</td>
           			</tr>
           			@endforeach
