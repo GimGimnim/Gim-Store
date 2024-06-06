@@ -3,7 +3,7 @@
     <!-- Sidebar Header-->
     <div class="sidebar-header d-flex align-items-center">
       <div class="avatar">
-        <a href="{{url('profile_view')}}">
+        <a href="{{url('profile')}}">
           <img src="{{asset('/admintemplate/img/avatar-6.jpg')}}" alt="..." class="img-fluid rounded-circle">
         </a>
       </div>
