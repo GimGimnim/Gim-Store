@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
     //Categories
     public function view_category()
     {
-        return view('admin.category.view');
+        $data = Category::all();
+
+        return view('admin.category.view',compact('data'));
     }
 
     public function add_category()
@@ -17,9 +20,35 @@ class AdminController extends Controller
         return view('admin.category.add');
     }
 
-    public function edit_category()
+    // public function edit_cat($id)
+    // {
+    //     $data = Category::find($id);
+
+    //     $data->replace();
+
+    //     return redirect()->back();
+    // }
+
+    public function add_cat(Request $request)
     {
-        return view('admin.category.edit');
+        $category = new Category;
+
+        $category->cat_name = $request->newcat;
+        $category->cat_photo = $request->newcatphoto;
+
+        $category->save();
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Category added successfully');
+
+        return view('admin.category.add');
+    }
+
+    public function delete_category($id)
+    {
+        $data = Category::find($id);
+
+        $data->delete();
+
+        return redirect()->back();
     }
 
 

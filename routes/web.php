@@ -26,7 +26,9 @@ route::get('admin/dashboard',[HomeController::class,'index'])-> middleware(['aut
 //Categories
 route::get('view_category',[AdminController::class,'view_category'])-> middleware(['auth','admin']);
 route::get('add_category',[AdminController::class,'add_category'])-> middleware(['auth','admin']);
-route::get('edit_category',[AdminController::class,'edit_category'])-> middleware(['auth','admin']);
+route::get('edit_cat/{id}',[AdminController::class,'edit_cat'])-> middleware(['auth','admin']);
+route::post('add_cat',[AdminController::class,'add_cat'])-> middleware(['auth','admin']);
+route::get('delete_category/{id}',[AdminController::class,'delete_category'])-> middleware(['auth','admin']);
 
 //Sub-categories
 route::get('view_subcategory',[AdminController::class,'view_subcategory'])-> middleware(['auth','admin']);
@@ -42,3 +44,5 @@ route::get('edit_product',[AdminController::class,'edit_product'])-> middleware(
 route::get('view_brand',[AdminController::class,'view_brand'])-> middleware(['auth','admin']);
 route::get('add_brand',[AdminController::class,'add_brand'])-> middleware(['auth','admin']);
 route::get('edit_brand',[AdminController::class,'edit_brand'])-> middleware(['auth','admin']);
+
+
