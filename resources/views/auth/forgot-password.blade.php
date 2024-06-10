@@ -23,3 +23,32 @@
         </div>
     </form>
 </x-guest-layout>
+
+<!-- <div class="modal fade" id="tyModal" role="dialog">
+  <div class="modal-dialog">
+    
+  
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Forgot Password</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body" style="padding:15px 50px;">
+        <div class="text-wrap text-left d-flex align-items-center order-md-last">
+          <div class="text w-100">
+            <form method="post" action="forgotpassword.php">
+              <div class="form-group" style="padding:20px 0px;">
+                <label for="usrname"><span class="fa fa-user"></span> Email</label>
+                <input type="email" class="form-control" name="emm" id="emm" placeholder="Enter your email" required>
+              </div>
+              <div style="padding:10px 0px;">
+                <button type="submit" class="form-control btn btn-dark btn-block" id="submitt">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -19,18 +19,14 @@
           <li><a href="{{url('add_category')}}">Add Categories</a></li>
         </ul>
       </li>
-     <!--  <li><a href="#subcategory" aria-expanded="false" data-toggle="collapse"><i class="icon-windows"></i>Sub-categories </a>
-        <ul id="subcategory" class="collapse list-unstyled ">
-          <li><a href="{{url('view_subcategory')}}">View Sub-categories</a></li>
-          <li><a href="{{url('add_subcategory')}}">Add Sub-categories</a></li>
-        </ul>
-      </li> -->
+
       <li><a href="#brands" aria-expanded="false" data-toggle="collapse"><i class="icon-windows"></i>Brands </a>
         <ul id="brands" class="collapse list-unstyled ">
           <li><a href="{{url('view_brand')}}">View Brands</a></li>
           <li><a href="{{url('add_brand')}}">Add Brands</a></li>
         </ul>
       </li>
+      
       <li><a href="#products" aria-expanded="false" data-toggle="collapse"><i class="icon-windows"></i>Products </a>
         <ul id="products" class="collapse list-unstyled ">
           <li><a href="{{url('view_product')}}">View Products</a></li>

@@ -1,89 +1,62 @@
-<section class="info_section  layout_padding2-top">
-    <div class="social_container">
-      <div class="social_box">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-    <div class="info_container ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              ABOUT US
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_form ">
-              <h5>
-                Newsletter
-              </h5>
-              <form action="#">
-                <input type="email" placeholder="Enter your email">
-                <button>
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              NEED HELP
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              CONTACT US
-            </h6>
-            <div class="info_link-box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer section -->
-    <footer class=" footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">The Gim Team</a>
-        </p>
-      </div>
-    </footer>
-    <!-- footer section -->
+<footer class="bg-danger text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <ul>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autosales.html">Automobile Sales</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autoservice.html">Automobile Servicing</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autorepair.html">Automobile Repair</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="s_p.html">Spray and Lighting</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="carwash.html">Car Loan</a></li>
+    </ul>
+    <br>
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="tel:08012345678" class="text-decoration-none text-secondary stretched-link" role="button"
+        ><i class="fa fa-phone"></i></a>
+    
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-google"></i></a>
 
-  </section>
-  
-  <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-  <script src="{{asset('js/bootstrap.js')}}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-facebook"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-twitter"></i></a>
+      
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-linkedin"></i></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <span class="fa fa-copyright"></span> 2023 GIM Autos, Inc. All rights reserved
+  </div>
+  <!-- Copyright -->
+</footer>
+
+  <script>
+  $(document).ready(function(){
+    $("#myBtn").click(function(){
+      $("#myModal").modal();
+    });
+  });
   </script>
-  <script src="{{asset('js/custom.js')}}"></script>
+
+  <script>
+  $(document).ready(function(){
+    $("#nyBtn").click(function(){
+      $("#nyModal").modal();
+    });
+  });
+  </script>
+  

@@ -54,12 +54,18 @@
           			@foreach($data as $data)
 
           			<tr>
-          				<td>{{$data->id}}</td>
-          				<td>{{$data->prod_name}}</td>
-          				<td>{{$data->prod_name}}</td>
-          				<td>{{$data->prod_photo}}</td>
+                  <td>{{$data->id}}</td>
+                  <td>{{$data->name}}</td>
+                  <td>{{$data->size}}</td>
+                  <td>{{$data->color}}</td>
+                  <td>{{$data->condition}}</td>
+                  <td>{{$data->description}}</td>
+                  <td>{{$data->quantity}}</td>
+                  <td>{{$data->brand}}</td>
+                  <td>{{$data->category}}</td>
+                  <td>{{$data->image}}</td>
           				<td>
-          					<!-- <a href="{{url('edit_product',$data->id)}}"><i style="color: blue;" class="icon-windows"></i></a> -->
+          					<a href="{{url('edit_product',$data->id)}}"><i style="color: blue;" class="fa-solid fa-pen-to-square"></i></a>
           					<a class="btn btn-danger" href="{{url('delete_product',$data->id)}}"><i class="icon-windows"></i></a>
           				</td>
           			</tr>

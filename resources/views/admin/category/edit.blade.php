@@ -31,17 +31,17 @@
           	<h1 style="color: white;">Edit Category</h1>
 
           	<div class="dsg">
-	          	<form action="{{url('edit_cat')}}" method="POST">
+	          	<form action="{{url('edit_cat',$data->id)}}" method="POST">
 	          		@csrf
 
 	          		<div class="form-group">
-	          			<input type="text" name="newcat" value="{{$data->cat_name}}">
+	          			<input type="text" name="editcat" value="{{$data->cat_name}}">
 	          		</div>
 	          		<div class="form-group">
-	          			<input type="text" name="newcatphoto"  value="{{$data->cat_photo}}">
+	          			<input type="text" name="editcatphoto" value="{{$data->cat_photo}}">
 	          		</div>
 	          		<div class="form-group">
-	          			<input class="btn btn-primary" type="submit" value="Edit Category">
+	          			<input class="btn btn-primary" type="submit" value="Edit">
 	          		</div>
 	          	</form>
 	        </div>

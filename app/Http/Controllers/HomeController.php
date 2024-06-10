@@ -13,7 +13,7 @@ class HomeController extends Controller
 
     public function user()
     {
-        return view('user.index');
+        return view('user.home');
     }
 
     public function home()
