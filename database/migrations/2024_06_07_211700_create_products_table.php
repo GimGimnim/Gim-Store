@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('size')->nullable();
             $table->string('color')->nullable();
-            $table->enum('condition',['Brand New','UK Used'])->default('Brand New');
+            $table->decimal('price', 20, 2)->nullable();
             $table->longText('description')->nullable();
             $table->string('quantity')->nullable();
             $table->string('brand')->nullable();

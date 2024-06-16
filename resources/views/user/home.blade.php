@@ -18,7 +18,7 @@
   
   <br><br><br><br>
 
-  @include('user.shop')
+  @include('user.body')
 
   <br><br><br><br>
 

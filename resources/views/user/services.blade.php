@@ -1,7 +1,7 @@
 <section id="services" class="services text-center section-padding">
     <div class="container">
       <div class="section-head">
-        <h4 class="display-6 text-danger">Our Services</h4>
+        <h4 class="display-5 text-danger">Our Services</h4>
         <p>Below is a list of our services.</p>
       </div>
       <div class="row">

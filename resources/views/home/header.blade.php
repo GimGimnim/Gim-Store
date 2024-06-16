@@ -1,63 +1,35 @@
-<header class="header_section">
-  <nav class="navbar navbar-expand-lg custom_nav-container ">
-    <a class="navbar-brand" href="index.html">
-      <span>
-        Gim Store
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class=""></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav  ">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+<nav class="navbar navbar-expand-sm bg-black navbar-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index.html">GIM Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <i class="fa fa-bars" aria-hidden="true" style="color:white;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="shop.html">
-            Shop
-          </a>
+          <a class="nav-link text-white" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="why.html">
-            Why Us
-          </a>
+          <a class="nav-link text-white" href="{{url('shop')}}">Shop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="testimonial.html">
-            Testimonial
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
+          <a class="nav-link text-white" href="contact.html">Contact us</a>
         </li>
       </ul>
-      <div class="user_option">
-        <a href="{{url('/login')}}">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <span>
-            Login
-          </span>
-        </a>
-
-        <a href="{{url('/register')}}">
-          <i class="fa fa-vcard" aria-hidden="true"></i>
-          <span>
-            Register
-          </span>
-        </a>
-
-
-        <a href="">
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-        </a>
-        <form class="form-inline ">
-          <button class="btn nav_search-btn" type="submit">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </form>
-      </div>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{{url('register')}}"> <i class="fa fa-user" aria-hidden="true"></i>
+          <span> Register</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{url('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i>
+            <span> Login</span></a>
+        </li>
+      </ul>
     </div>
   </nav>
-</header>

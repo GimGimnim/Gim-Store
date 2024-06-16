@@ -39,24 +39,14 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <span class="fa fa-copyright"></span> 2023 GIM Autos, Inc. All rights reserved
+    <span class="fa fa-copyright"></span> 2024 GIM Store, Inc. All rights reserved
   </div>
   <!-- Copyright -->
 </footer>
 
-  <script>
-  $(document).ready(function(){
-    $("#myBtn").click(function(){
-      $("#myModal").modal();
-    });
-  });
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-
-  <script>
-  $(document).ready(function(){
-    $("#nyBtn").click(function(){
-      $("#nyModal").modal();
-    });
-  });
-  </script>
+  <script src="js/custom.js"></script>
   
