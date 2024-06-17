@@ -14,7 +14,13 @@
 
 	</div>
 
+	<br><br>
 	<div class="container">
+		<div class="heading_container heading_center">
+	        <h2  class="display-4 text-center text-danger">
+	          About Us
+	        </h2>
+    	</div>
 	  <br><br><br>
 	  <div class="row">
 	    <div class="col-md-6">

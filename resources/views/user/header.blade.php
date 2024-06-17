@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-sm bg-danger navbar-danger fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="{{url('user')}}">GIM Store</a>
+      <a class="navbar-brand text-white" href="{{url('user')}}">
+        <!-- <img src="/images/logo.png" alt="logo" class="logo" style="width: 15%;"> -->
+        GIM Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,6 +23,15 @@
       </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{$count}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{url('wishlist')}}"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+        </li>
+      </ul>
 
     <!-- Log out               -->
       <div class="list-inline-item logout">

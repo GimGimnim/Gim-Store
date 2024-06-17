@@ -1,7 +1,7 @@
 <section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2  class="display-5 text-center text-danger">
+        <h2  class="display-4 text-center text-danger">
           Latest Products
         </h2>
       </div>
@@ -12,7 +12,7 @@
 
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
+            <a href="{{url('details', $products->id)}}">
               <div class="img-box">
                 <img src="{{$products->image}}" alt="">
               </div>

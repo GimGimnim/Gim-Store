@@ -16,7 +16,7 @@
 
 <br><br>
   <div class="text-center pt-4 pb-3" style="background-color: rgba(255,220,176,1);">
-    <h3 class="display-5 text-danger">CONTACT US</h3>
+    <h3 class="display-4 text-danger">CONTACT US</h3>
   </div>
   <br><br>
   <div class="text-center">

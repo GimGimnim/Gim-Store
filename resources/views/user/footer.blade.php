@@ -1,12 +1,13 @@
 <footer class="bg-danger text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
-    <ul>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autosales.html">Automobile Sales</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autoservice.html">Automobile Servicing</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autorepair.html">Automobile Repair</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="s_p.html">Spray and Lighting</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="carwash.html">Car Loan</a></li>
+    <ul class="row_center">
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('user')}}">Home</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('shop')}}">Shop</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('about')}}">About Us</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('contact')}}">Contact Us</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('brands')}}">Brands</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('categories')}}">Categories</a></li>
     </ul>
     <br>
     <!-- Section: Social media -->

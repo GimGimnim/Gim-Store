@@ -11,6 +11,12 @@ use App\Http\Controllers\ProductController;
 
 route::get('/',[HomeController::class,'home']);
 
+route::get('hmabout',[HomeController::class,'about']);
+route::get('hmcontact',[HomeController::class,'contact']);
+route::get('hmshop',[HomeController::class,'shop']);
+
+route::get('hmdetails',[HomeController::class,'details']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -25,6 +31,10 @@ route::get('user',[HomeController::class,'user'])-> middleware(['auth','verified
 route::get('about',[UserController::class,'about'])-> middleware(['auth','verified']);
 route::get('contact',[UserController::class,'contact'])-> middleware(['auth','verified']);
 route::get('shop',[UserController::class,'shop'])-> middleware(['auth','verified']);
+
+route::get('details/{id}',[UserController::class,'details'])-> middleware(['auth','verified']);
+
+route::get('add_cart/{id}',[UserController::class,'addCart'])-> middleware(['auth','verified']);
 
 // // Categories
 // route::get('view_category',[CategoryController::class,'view_category'])-> middleware(['auth','admin']);
