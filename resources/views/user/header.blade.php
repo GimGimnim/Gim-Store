@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-danger navbar-danger fixed-top">
+<nav style="background-color: #EF0107;" class="navbar navbar-expand-sm fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="{{url('user')}}">
         <!-- <img src="/images/logo.png" alt="logo" class="logo" style="width: 15%;"> -->
@@ -29,8 +29,9 @@
           <a class="nav-link text-white" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{$count}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{url('wishlist')}}"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+          <a class="nav-link text-white" href="{{url('wishlist')}}"><i class="fa fa-star-o" aria-hidden="true"></i> {{$countw}}</a>
         </li>
+        <pre>  </pre>
       </ul>
 
     <!-- Log out               -->
@@ -38,7 +39,7 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <input type="submit" value="Logout">
+            <input type="submit" value="Logout" style="background-color: #EF0107; border-style: none; color: white; font-weight: bold;">
         </form>
     </div>
   </nav>

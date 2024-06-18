@@ -1,4 +1,4 @@
-<footer class="bg-danger text-center text-white">
+<footer style="background-color: #EF0107;" class="text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <ul class="row_center">

@@ -1,7 +1,7 @@
 <section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2  class="display-4 text-center text-danger">
+        <h2 style="color: #EF0107;" class="display-4 text-center">
           Latest Products
         </h2>
       </div>
@@ -19,8 +19,13 @@
               <div class="detail-box">
                 <h6>{{$products->name}}</h6>
                 <h6>
-                  <span>{{$products->price}}</span>
+                  <span style="color: #EF0107;">${{$products->price}}</span>
                 </h6>
+              </div>
+              <div class="detail-box">
+                <a href="{{url('add_cart',$products->id)}}" class="btn btn-danger" style="align-items: left;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+
+                <a href="{{url('favorite',$products->id)}}" class="btn btn-danger"><i class="fa fa-star-o" aria-hidden="true"></i></a>
               </div>
               <div class="new">
                 <span>

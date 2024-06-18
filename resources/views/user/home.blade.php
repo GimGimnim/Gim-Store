@@ -15,16 +15,12 @@
   @include('user.slider')
 
   </div>
-  
-  <br><br><br><br>
 
   @include('user.body')
 
-  <br><br><br><br>
-
   @include('user.services')
 
-  <br><br><br><br>
+  <br><br>
 
   @include('user.footer')
 

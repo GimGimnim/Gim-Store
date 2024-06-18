@@ -36,12 +36,12 @@ route::get('details/{id}',[UserController::class,'details'])-> middleware(['auth
 
 route::get('add_cart/{id}',[UserController::class,'addCart'])-> middleware(['auth','verified']);
 
-// // Categories
-// route::get('view_category',[CategoryController::class,'view_category'])-> middleware(['auth','admin']);
+route::get('favorite/{id}',[UserController::class,'favorite'])-> middleware(['auth','verified']);
 
+route::get('cart',[UserController::class,'cart'])-> middleware(['auth','verified']);
+route::get('wishlist',[UserController::class,'wishlist'])-> middleware(['auth','verified']);
 
-// // Products
-// route::get('view_product',[ProductController::class,'view_product'])-> middleware(['auth','admin']);
+route::get('deletecartitem/{id}',[UserController::class,'delcart'])-> middleware(['auth','verified']);
+route::get('deletefav/{id}',[UserController::class,'deletefav'])-> middleware(['auth','verified']);
 
-// // Brands
-// route::get('view_brand',[BrandController::class,'view_brand'])-> middleware(['auth','admin']);
+route::post('checkout',[UserController::class,'checkout'])-> middleware(['auth','verified']);

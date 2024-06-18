@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Wishlist;
 
 class HomeController extends Controller
 {
@@ -20,7 +21,9 @@ class HomeController extends Controller
 
         $count = Cart::where('user_id',$userid)->count();
 
-        return view('user.home', compact('product','count'));
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        return view('user.home', compact('product','count', 'countw'));
     }
 
     public function home()

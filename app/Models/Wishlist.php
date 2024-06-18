@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 
-class Cart extends Model
+class Wishlist extends Model
 {
     use HasFactory;
 
     public function user()
     {
-        return $this->hasOne('App\Models\User', 'id', 'user_id');
+        return $this->hasOne('App\Models\User', 'id', 'uid');
     }
 
     public function product()
     {
-        return $this->hasOne('App\Models\Product', 'id', 'product_id');
+        return $this->hasOne('App\Models\Product', 'id', 'pid');
     }
 }

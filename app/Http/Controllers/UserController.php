@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Wishlist;
+use App\Models\Order;
 
 class UserController extends Controller
 {
@@ -18,7 +20,9 @@ class UserController extends Controller
 
         $count = Cart::where('user_id',$userid)->count();
 
-        return view('user.contact', compact('count'));
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        return view('user.contact', compact('count', 'countw'));
     }
 
     public function about()
@@ -29,7 +33,9 @@ class UserController extends Controller
 
         $count = Cart::where('user_id',$userid)->count();
 
-        return view('user.about', compact('count'));
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        return view('user.about', compact('count', 'countw'));
     }
 
     public function shop()
@@ -42,7 +48,9 @@ class UserController extends Controller
 
         $count = Cart::where('user_id',$userid)->count();
 
-        return view('user.shop', compact('product', 'count'));
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        return view('user.shop', compact('product', 'count', 'countw'));
     }
 
     public function details($id)
@@ -55,7 +63,9 @@ class UserController extends Controller
 
         $count = Cart::where('user_id',$userid)->count();
 
-        return view('user.details', compact('data', 'count'));
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        return view('user.details', compact('data', 'count', 'countw'));
     }
 
     public function addCart($id)
@@ -77,6 +87,121 @@ class UserController extends Controller
         toastr()->timeOut(5000)->closeButton()->addSuccess('Item successfully added to cart');
 
         return redirect()->back();
+    }
+
+    public function favorite($id)
+    {
+        $productt_id = $id;
+
+        $user = Auth::user();
+
+        $userr_id = $user->id;
+
+        $wishlist = new Wishlist;
+
+        $wishlist->uid = $userr_id;
+
+        $wishlist->pid = $productt_id;
+
+        $wishlist->save();
+
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Successfully added to Wishlist');
+
+        return redirect()->back();
+    }
+
+    public function cart()
+    {
+        $user = Auth::user();
+
+        $userid = $user->id;
+
+        $count = Cart::where('user_id',$userid)->count();
+
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        $cart = Cart::where('user_id', $userid)->get();
+
+        return view('user.cart', compact('count', 'countw', 'cart'));
+    }
+
+    public function wishlist()
+    {
+        $user = Auth::user();
+
+        $userid = $user->id;
+
+        $count = Cart::where('user_id',$userid)->count();
+
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        $wishlist = Wishlist::where('uid',$userid)->get();
+
+        return view('user.wishlist', compact('count', 'countw', 'wishlist'));
+    }
+
+    public function delcart($id)
+    {
+        $del = Cart::find($id);
+
+        $del->delete();
+
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Item removed from Cart!');
+
+        return redirect()->back();
+    }
+
+    public function deletefav($id)
+    {
+        $delfav = Wishlist::find($id);
+
+        $delfav->delete();
+
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Successfully removed from Wishlist!');
+
+        return redirect()->back();
+    }
+
+    public function checkout(Request $request)
+    {
+        $name = $request->name;
+        $phone = $request->phone;
+        $address = $request->address;
+        $userid = Auth::user()->id;
+
+        $cart = Cart::where('user_id',$userid)->get();
+
+        foreach ($cart as $carts)
+        {
+            $order = new Order;
+
+            $order->name = $name;
+
+            $order->phone = $phone;
+
+            $order->rec_address = $address;
+
+            $order->user_id = $userid;
+
+            $order->product_id = $carts->product_id;
+
+            $order->save();
+
+
+        }
+
+        $cart_update = Cart::where('user_id',$userid)->get();
+
+        foreach($cart_update as $update)
+        {
+            $data = Cart::find($update->id);
+            $data->delete();
+        }
+
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Order Placed Successfully');
+
+        return redirect()->back();
+
     }
 
 }

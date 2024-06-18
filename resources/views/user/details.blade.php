@@ -41,7 +41,7 @@
   <section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2 class="display-4 text-center text-danger">
+        <h2 style="color: #EF0107" class="display-4 text-center">
           {{$data->name}}
         </h2>
       </div>
