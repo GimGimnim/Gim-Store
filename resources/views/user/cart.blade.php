@@ -61,11 +61,6 @@
     width: 100%;
   }
 
-  .dfg
-  {
-    width: 100%;
-  }
-
 </style>
 
 </head>
@@ -137,19 +132,21 @@
           <div class="form-group">
               <div class="ntem">
                 <label for="name">Receiver Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{$cart->user->name}}">
+                <input type="text" class="form-control" name="name" value="{{Auth::user()->name}}">
               </div>
+              <br>
               <div class="ntem">
                 <label for="phone">Receiver Phone</label>
-                <input type="text" class="form-control" id="phone" name="phone" value="{{$cart->user->phone}}">
+                <input type="text" class="form-control" name="phone" value="{{Auth::user()->phone}}">
               </div>
           </div>
+          <br>
           <div class="form-group pb-2">
             <label class="form-label" for="address">Receiver Address</label>
-            <textarea type="textarea" class="form-control" id="address" name="address" rows="5">{{$cart->user->address}}</textarea>
+            <textarea type="textarea" class="form-control" name="address" rows="5">{{Auth::user()->address}}</textarea>
           </div>
           <div class="form-group">
-            <input type="submit" style="font-weight: bold; background-color: #EF0107; color: white;" class="form-control btn btn-block" value="Place Order">
+            <input type="submit" style="font-weight: bold; background-color: #EF0107; color: white;" class="form-control btn btn-block" value="Pay with Card">
           </div>
         </form>
     </div>

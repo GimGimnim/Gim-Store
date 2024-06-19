@@ -26,6 +26,9 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
+          <a class="nav-link text-white" href="{{url('myorders')}}">My Orders</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link text-white" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{$count}}</a>
         </li>
         <li class="nav-item">

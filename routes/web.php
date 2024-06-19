@@ -27,6 +27,8 @@ require __DIR__.'/auth.php';
 
 route::get('user',[HomeController::class,'user'])-> middleware(['auth','verified'])->name('/');
 
+route::get('myorders',[UserController::class,'myorders'])-> middleware(['auth','verified']);
+
 
 route::get('about',[UserController::class,'about'])-> middleware(['auth','verified']);
 route::get('contact',[UserController::class,'contact'])-> middleware(['auth','verified']);
@@ -44,4 +46,9 @@ route::get('wishlist',[UserController::class,'wishlist'])-> middleware(['auth','
 route::get('deletecartitem/{id}',[UserController::class,'delcart'])-> middleware(['auth','verified']);
 route::get('deletefav/{id}',[UserController::class,'deletefav'])-> middleware(['auth','verified']);
 
-route::post('checkout',[UserController::class,'checkout'])-> middleware(['auth','verified']);
+Route::controller(UserController::class)->group(function(){
+    Route::post('checkout', 'checkout');
+    Route::get('stripe', 'stripe');
+    Route::post('stripe', 'stripePost')->name('stripe.post');
+})-> middleware(['auth','verified']);
+

@@ -167,6 +167,7 @@ class UserController extends Controller
         $name = $request->name;
         $phone = $request->phone;
         $address = $request->address;
+        $email = $request->email;
         $userid = Auth::user()->id;
 
         $cart = Cart::where('user_id',$userid)->get();
@@ -181,20 +182,20 @@ class UserController extends Controller
 
             $order->rec_address = $address;
 
+            $order->email = Auth::user()->email;
+
             $order->user_id = $userid;
 
             $order->product_id = $carts->product_id;
 
             $order->save();
-
-
         }
 
-        $cart_update = Cart::where('user_id',$userid)->get();
+        $cart_remove = Cart::where('user_id',$userid)->get();
 
-        foreach($cart_update as $update)
+        foreach($cart_remove as $remove)
         {
-            $data = Cart::find($update->id);
+            $data = Cart::find($remove->id);
             $data->delete();
         }
 
@@ -202,6 +203,19 @@ class UserController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function myorders()
+    {
+        $userid = Auth::user()->id;
+
+        $count = Cart::where('user_id',$userid)->count();
+
+        $countw = Wishlist::where('uid',$userid)->count();
+
+        $order = Order::where('user_id',$userid)->get();
+
+        return view('user.order', compact('count', 'countw', 'order'));
     }
 
 }
