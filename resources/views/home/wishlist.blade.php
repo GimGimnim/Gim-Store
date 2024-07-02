@@ -101,6 +101,10 @@
     </div>
     <!-- End Container -->
 
+    <div>
+      {{$wishlist->links()}}
+    </div>
+
   </section>
 
   <br><br>

@@ -120,6 +120,10 @@
   		</table>
     </div>
 
+    <div>
+      {{$product->links()}}
+    </div>
+
   	<div class="detail-box">
   		<h5 style="padding: 30px;" class="display-6">Total: ${{$total}}</h5>
   	</div>

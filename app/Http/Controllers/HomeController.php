@@ -11,9 +11,21 @@ use App\Models\Wishlist;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        return view('admin.index');
+    }
+
+    public function home()
+    {
+        $product = Product::paginate(8);
+
+        return view('home.home', compact('product'));
+    }
+
     public function user()
     {
-        $product = Product::all();
+        $product = Product::paginate(8);
 
         $user = Auth::user();
 
@@ -23,13 +35,7 @@ class HomeController extends Controller
 
         $countw = Wishlist::where('uid',$userid)->count();
 
-        return view('user.home', compact('product','count', 'countw'));
+        return view('home.home', compact('product','count', 'countw'));
     }
 
-    public function home()
-    {
-        $product = Product::all();
-
-        return view('home.home');
-    }
 }

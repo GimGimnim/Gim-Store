@@ -14,58 +14,86 @@ class UserController extends Controller
 {
     public function contact()
     {
-        $user = Auth::user();
+        if (Auth::check())
+        {
+            $userid = Auth::user()->id;
 
-        $userid = $user->id;
+            $count = Cart::where('user_id',$userid)->count();
 
-        $count = Cart::where('user_id',$userid)->count();
+            $countw = Wishlist::where('uid',$userid)->count();
 
-        $countw = Wishlist::where('uid',$userid)->count();
+            return view('home.contact', compact('count', 'countw'));
+        }
 
-        return view('user.contact', compact('count', 'countw'));
+        else
+        {
+            return view('home.contact');
+        }
+
     }
 
     public function about()
     {
-        $user = Auth::user();
+        if (Auth::check())
+        {
+            $userid = Auth::user()->id;
 
-        $userid = $user->id;
+            $count = Cart::where('user_id',$userid)->count();
 
-        $count = Cart::where('user_id',$userid)->count();
+            $countw = Wishlist::where('uid',$userid)->count();
 
-        $countw = Wishlist::where('uid',$userid)->count();
+            return view('home.about', compact('count', 'countw'));
+        }
 
-        return view('user.about', compact('count', 'countw'));
+        else
+        {
+            return view('home.about');
+        }
+
     }
 
     public function shop()
     {
-        $product = Product::paginate(6);
+        $product = Product::paginate(12);
 
-        $user = Auth::user();
+        if (Auth::check())
+        {
+            $userid = Auth::user()->id;
 
-        $userid = $user->id;
+            $count = Cart::where('user_id',$userid)->count();
 
-        $count = Cart::where('user_id',$userid)->count();
+            $countw = Wishlist::where('uid',$userid)->count();
 
-        $countw = Wishlist::where('uid',$userid)->count();
+            return view('home.shop', compact('product', 'count', 'countw'));
+        }
 
-        return view('user.shop', compact('product', 'count', 'countw'));
+        else
+        {
+            return view('home.shop', compact('product'));
+        }
+        
     }
 
     public function details($id)
     {
         $data = Product::find($id);
 
-        $user = Auth::user();
+        if (Auth::check())
+        {
+            $userid = Auth::user()->id;
 
-        $userid = $user->id;
+            $count = Cart::where('user_id',$userid)->count();
 
-        $count = Cart::where('user_id',$userid)->count();
+            $countw = Wishlist::where('uid',$userid)->count();
 
-        $countw = Wishlist::where('uid',$userid)->count();
+            return view('home.details', compact('data', 'count', 'countw'));
+        }
 
-        return view('user.details', compact('data', 'count', 'countw'));
+        else
+        {
+            return view('home.contact', compact('data'));
+        }
+        
     }
 
     public function addCart($id)
@@ -122,7 +150,7 @@ class UserController extends Controller
 
         $cart = Cart::where('user_id', $userid)->get();
 
-        return view('user.cart', compact('count', 'countw', 'cart'));
+        return view('home.cart', compact('count', 'countw', 'cart'));
     }
 
     public function wishlist()
@@ -137,7 +165,7 @@ class UserController extends Controller
 
         $wishlist = Wishlist::where('uid',$userid)->get();
 
-        return view('user.wishlist', compact('count', 'countw', 'wishlist'));
+        return view('home.wishlist', compact('count', 'countw', 'wishlist'));
     }
 
     public function delcart($id)
@@ -215,7 +243,7 @@ class UserController extends Controller
 
         $order = Order::where('user_id',$userid)->get();
 
-        return view('user.order', compact('count', 'countw', 'order'));
+        return view('home.order', compact('count', 'countw', 'order'));
     }
 
 }

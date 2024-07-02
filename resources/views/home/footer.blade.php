@@ -1,12 +1,13 @@
-<footer class="bg-dark text-center text-white">
+<footer style="background-color: #EF0107;" class="text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
-    <ul>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autosales.html">Automobile Sales</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autoservice.html">Automobile Servicing</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="autorepair.html">Automobile Repair</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="s_p.html">Spray and Lighting</a></li>
-      <li class="list-inline-item"><a class="text-decoration-none text-white" href="carwash.html">Car Loan</a></li>
+    <ul class="row_center">
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('home')}}">Home</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('shop')}}">Shop</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('about')}}">About Us</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('contact')}}">Contact Us</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('brands')}}">Brands</a></li>
+      <li class="list-inline-item"><a class="text-decoration-none text-white" href="{{url('categories')}}">Categories</a></li>
     </ul>
     <br>
     <!-- Section: Social media -->
@@ -38,25 +39,15 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: black;">
-    <span class="fa fa-copyright"></span> 2023 GIM Autos, Inc. All rights reserved
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <span class="fa fa-copyright"></span> 2024 GIM Store, Inc. All rights reserved
   </div>
   <!-- Copyright -->
 </footer>
 
-  <script>
-  $(document).ready(function(){
-    $("#myBtn").click(function(){
-      $("#myModal").modal();
-    });
-  });
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-
-  <script>
-  $(document).ready(function(){
-    $("#nyBtn").click(function(){
-      $("#nyModal").modal();
-    });
-  });
-  </script>
+  <script src="js/custom.js"></script>
   

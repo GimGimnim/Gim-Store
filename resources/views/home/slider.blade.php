@@ -19,7 +19,7 @@
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images\awwn.jpg" alt="Los Angeles" class="mx-auto rounded d-block" style="width:100%" height="40%">
+          <img src="images\awwn.jpg" alt="Los Angeles" class="mx-auto rounded d-block" style="width:100%" height="800">
           <div class="carousel-caption d-none d-md-block">
             <h6 class="display-6">Rolls Royce</h6>
           </div>

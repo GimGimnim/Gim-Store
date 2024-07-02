@@ -108,6 +108,10 @@
     </div>
     <!-- End Container -->
 
+    <div>
+      {{$order->links()}}
+    </div>
+
   </section>
 
   <br><br>

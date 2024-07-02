@@ -44,4 +44,9 @@
     </div>
     <!-- End Container -->
 
+      <div class="linkk">
+        <button style="color: #EF0107;" class="btn btn-sbt" type="button"><a class="text-decoration-none" style="color: white;" href="{{url('shop')}}">View All</a></button>
+      </div>
+
+
   </section>

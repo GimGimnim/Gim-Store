@@ -3,14 +3,14 @@
 
 <head>
  
- @include('user.head')
+ @include('home.head')
 
 </head>
 
 <body style="background-color: rgba(255,229,180,0.2);">
 	<div class="hero_area">
 
-	@include('user.header')
+	@include('home.header')
 
 	</div>
 
@@ -137,7 +137,7 @@
 
   <br><br><br>
 
-	@include('user.footer')
+	@include('home.footer')
 
 </body>
 

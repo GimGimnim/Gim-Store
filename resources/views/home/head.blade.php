@@ -23,37 +23,135 @@
 <!-- responsive style -->
 <link href="/css/responsive.css" rel="stylesheet" />
 <style type="text/css">
-  .active{
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 450;
+  }
+
+  .navdsg{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    z-index: 100;
+    text-decoration-color: white;
+  }
+
+  .nav-item {
+    position: relative;
+    margin-left: 20px;
+    list-style: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .logo
+  {
+    margin: -25px 0 -27px 0;
+    position: relative;
+    list-style: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-link {
+    color: white;
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .nav-link:hover {
+    color: white;
     font-weight: bold;
   }
-  #message {
-    display:none;
-    color: #000;
-    position: relative;
-    padding: 0px;
+
+  .linkk {
+    padding-top: 20px;
+    margin: auto;
+    width: 60%;
   }
 
-  #message p {
-    padding: 0px 5px;
-    font-size: 10px;
+  .btn-sbt {
+    display: block;
+    color: white;
+    margin: auto;
+    width: 25%;
+    background-color: #EF0107;
+    background-image: linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3)
+    );
   }
 
-  /* Add a green text color and a checkmark when the requirements are right */
-  .valid {
-    color: green;
+  .btn-sbt:hover {
+    color: white;
+    background-color: black;
   }
 
-  .valid:before {
-    position: relative;
-    left: -35px;
+  footer{
+    background-color: rgba(250, 209, 2, 0.3);
+    background-image: linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    );
   }
 
-  /* Add a red text color and an "x" when the requirements are wrong */
-  .invalid {
-    color: red;
+  .card{
+    height: 220px;
+    border: 1px solid rgb(218, 165, 62);
+    border-radius: 15px;
   }
 
-  .invalid:before {
-    position: relative;
-    left: -35px;
+  .cardd{
+    padding-top: 20px;
+  }
+
 </style>

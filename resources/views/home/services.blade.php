@@ -1,25 +1,23 @@
 <section id="services" class="services text-center section-padding">
     <div class="container">
       <div class="section-head">
-        <h4 class="display-6 text-danger">Our Services</h4>
+        <h4 style="color: #EF0107;" class="display-5">Our Services</h4>
         <p>Below is a list of our services.</p>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-money fa-2x"></i></span>
               <div class="cont">
                 <h5 class="mt-2">Automobile Sales</h5>
-                <p class="text-secondary">Shopping for a new car or looking to swap your car?<br><br></p>
+                <p class="text-secondary">Shopping for a new vehicle or looking to swap your vehicle?<br><br></p>
                 <a href="autosales.html" class="box-icon-btn text-secondary stretched-link"><span>Visit our store</span></a>
               </div>
             </div>
           </div>
-          <br>
         </div>
-
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-lightbulb-o fa-2x"></i></span>
@@ -30,26 +28,24 @@
               </div>
             </div>
           </div>
-        <br>
-        </div>
 
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center" rows="5">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-cogs fa-2x"></i></span>
               <div class="cont">
                 <h5 class="mt-2">Automotive Repair</h5>
-                <p class="text-secondary">Get the exterior bodywork that your car needs from the professionals at GIM Autos.</p>
+                <p class="text-secondary">Get the exterior bodywork that your vehicle needs from the professionals at GIM Autos.</p>
                 <a href="autorepair.html" class="box-icon-btn text-secondary stretched-link"><span>Read More</span></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <br>
       <div class="row">
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-paint-brush fa-2x"></i></span>
@@ -60,10 +56,8 @@
               </div>
             </div>
           </div>
-          <br>
         </div>
-
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-car fa-2x"></i></span>
@@ -74,10 +68,8 @@
               </div>
             </div>
           </div>
-          <br>
         </div>
-        
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
           <div class="card p-3 justify-content-center">
             <div class="box-icon-left items">
               <span class="icon text-primary"><i class="fa fa fa-book fa-2x"></i></span>

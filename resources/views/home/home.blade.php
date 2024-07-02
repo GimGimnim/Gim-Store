@@ -7,7 +7,7 @@
 
 </head>
 
-<body>
+<body style="background-color: rgba(255,229,180,0.2);">
   <div class="hero_area">
     
   @include('home.header')
@@ -15,16 +15,12 @@
   @include('home.slider')
 
   </div>
-  
-  <br><br><br><br>
 
-  @include('home.shop')
-
-  <br><br><br><br>
+  @include('home.body')
 
   @include('home.services')
 
-  <br><br><br><br>
+  <br><br>
 
   @include('home.footer')
 
