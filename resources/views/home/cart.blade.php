@@ -3,7 +3,7 @@
 
 <head>
  
- @include('user.head')
+ @include('home.head')
 
 <style type="text/css">
   
@@ -68,7 +68,7 @@
 <body style="background-color: rgba(255,229,180,0.2);">
   <div class="hero_area">
     
-  @include('user.header')
+  @include('home.header')
 
   </div>
   
@@ -107,9 +107,9 @@
   				<td>{{1}}</td>
   				<td>${{$cart->product->price}}</td>
   				<td>${{$cart->product->price * 1}}</td>
-  				<td><a href="{{url('deletecartitem',$cart->id)}}"><i style="color: red;" class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+  				<td><pre><a href="{{url('favorite',$cart->product->id)}}"><i style="color: red;" class="fa-sharp fa-solid fa-star fa-2x"></i></a>    <a href="{{url('deletecartitem',$cart->id)}}"><i style="color: red;" class="fa fa-trash fa-2x"></i></a></pre></td>
   			</tr>
-
+        
   			<?php
 
   				$total = $total + ($cart->product->price * 1);
@@ -118,10 +118,6 @@
   			@endforeach
 
   		</table>
-    </div>
-
-    <div>
-      {{$product->links()}}
     </div>
 
   	<div class="detail-box">
@@ -134,6 +130,9 @@
           @csrf
 
           <div class="form-group">
+            
+          <h3 style="color: rgba(85,107,47, 1.0);">CHECKOUT</h3>
+          <br>
               <div class="ntem">
                 <label for="name">Receiver Name</label>
                 <input type="text" class="form-control" name="name" value="{{Auth::user()->name}}">
@@ -150,7 +149,7 @@
             <textarea type="textarea" class="form-control" name="address" rows="5">{{Auth::user()->address}}</textarea>
           </div>
           <div class="form-group">
-            <input type="submit" style="font-weight: bold; background-color: #EF0107; color: white;" class="form-control btn btn-block" value="Pay with Card">
+            <input type="submit" style="font-weight: bold; background-color: #EF0107; color: white;" class="form-control btn btn-block" value="Place Order">
           </div>
         </form>
     </div>
@@ -162,7 +161,7 @@
 
   <br><br>
 
-  @include('user.footer')
+  @include('home.footer')
 
 </body>
 

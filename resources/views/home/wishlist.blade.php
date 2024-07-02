@@ -3,7 +3,7 @@
 
 <head>
  
- @include('user.head')
+ @include('home.head')
 
 <style type="text/css">
   
@@ -61,7 +61,7 @@
 <body style="background-color: rgba(255,229,180,0.2);">
   <div class="hero_area">
     
-  @include('user.header')
+  @include('home.header')
 
   </div>
   
@@ -92,7 +92,7 @@
             <td>{{$wishlist->product->name}}</td>
             <td>{{$wishlist->product->price}}</td>
             <td>
-              <pre><a href="{{url('add_cart',$wishlist->product->id)}}"><i style="color: blue;" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>    <a href="{{url('deletefav',$wishlist->id)}}"><i style="color: red;" class="fa fa-trash fa-2x" aria-hidden="true"></i></a></pre></td>
+              <pre><a href="{{url('add_cart',$wishlist->product->id)}}"><i style="color: red;" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>    <a href="{{url('deletefav',$wishlist->id)}}"><i style="color: red;" class="fa fa-trash fa-2x" aria-hidden="true"></i></a></pre></td>
           </tr>
           @endforeach
         </table>
@@ -101,15 +101,11 @@
     </div>
     <!-- End Container -->
 
-    <div>
-      {{$wishlist->links()}}
-    </div>
-
   </section>
 
   <br><br>
 
-  @include('user.footer')
+  @include('home.footer')
 
 </body>
 

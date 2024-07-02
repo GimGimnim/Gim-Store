@@ -39,9 +39,9 @@
                 </h4>
               </div>
               <div class="detail-box">
-                <a href="{{url('add_cart',$products->id)}}" class="btn btn-danger" style="align-items: left;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <a href="{{url('add_cart',$products->id)}}" class="btn btn-danger" style="align-items: left;"><i class="fa fa-shopping-cart"></i></a>
 
-                <a href="{{url('favorite',$products->id)}}" class="btn btn-danger"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <a href="{{url('favorite',$products->id)}}" class="btn btn-danger"><i class="fa fa-star-o"></i></a>
               </div>
               <div class="new">
                 <span>

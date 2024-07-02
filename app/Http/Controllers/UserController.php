@@ -110,6 +110,8 @@ class UserController extends Controller
 
         $data->product_id = $product_id;
 
+        $data->quantity = 1;
+
         $data->save();
 
         toastr()->timeOut(5000)->closeButton()->addSuccess('Item successfully added to cart');
