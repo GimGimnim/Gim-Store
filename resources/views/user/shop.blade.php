@@ -35,7 +35,7 @@
               <div class="detail-box">
                 <h4>{{$products->name}}</h4>
                 <h4 class="text-danger">
-                  <span>${{$products->price}}</span>
+                  <span>₦{{$products->price}}</span>
                 </h4>
               </div>
               <div class="detail-box">
@@ -56,6 +56,10 @@
 
       </div>
       <!-- End Row -->
+
+      <div>
+        {{$product->links()}}
+      </div>
 
     </div>
     <!-- End Container -->

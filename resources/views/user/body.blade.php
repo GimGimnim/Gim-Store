@@ -19,7 +19,7 @@
               <div class="detail-box">
                 <h6>{{$products->name}}</h6>
                 <h6>
-                  <span style="color: #EF0107;">${{$products->price}}</span>
+                  <span style="color: #EF0107;">₦{{$products->price}}</span>
                 </h6>
               </div>
               <div class="detail-box">

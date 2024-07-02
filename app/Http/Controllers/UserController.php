@@ -40,7 +40,7 @@ class UserController extends Controller
 
     public function shop()
     {
-        $product = Product::all();
+        $product = Product::paginate(6);
 
         $user = Auth::user();
 
